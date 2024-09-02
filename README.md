@@ -23,20 +23,20 @@ docker build -t internet-monitor .
 Once the Docker image is built, you can run the container with the following command:
 
 ```bash
-sudo docker run -d --name internet-monitor-container -v $(pwd)/internet_test_results.txt:/app/internet_test_results.txt internet-monitor
+docker run -d --name internet-monitor-container -v $(pwd):/app internet-monitor
 ```
 
 ## Stopping the Container
 To stop the container, run:
 
 ```bash
-sudo docker stop internet-monitor-container
+docker stop internet-monitor-container
 ```
 
 ### To remove the container after stopping it:
 
 ```bash
-sudo docker rm internet-monitor-container
+docker rm internet-monitor-container
 ```
 
 
